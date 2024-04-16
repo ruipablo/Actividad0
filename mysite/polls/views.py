@@ -6,6 +6,7 @@ from django.http import Http404
 from django.shortcuts import get_object_or_404, render
 from django.db.models import F
 from django.views import generic
+from django.urls import reverse
 
 
 class IndexView(generic.ListView):
@@ -19,7 +20,7 @@ class IndexView(generic.ListView):
 
 class DetailView(generic.DetailView):
     model = Question
-    template_name = "polls/detail.html"
+    template_name = "polls/details.html"
 
 
 class ResultsView(generic.DetailView):
